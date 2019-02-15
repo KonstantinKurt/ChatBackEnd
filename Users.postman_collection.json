@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "30ef1a4a-bf5f-4fc7-9d43-ba16570ab4dc",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "testName",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testPaswword",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test2222222222222@mail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "kkkkk",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kkkkk@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/authentication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9maWxlIjp7ImF2YXRhciI6IiIsIl9pZCI6IjVjNjJlM2ZiN2JlNDI4NmY2MTAwZmY4OCIsInBhc3N3b3JkIjoiJDJiJDEwJFE1TlZhc0dvcHFiQi5PL3R4d2wxMU9GRzBZbXg2RWxzUDNmR2xRSUY2MGZRTmxVRzBsV3FLIiwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwibmFtZSI6InRlc3ROYW1lIiwiaW1hZ2VQYXRoIjoicHVibGljL2ltYWdlcy8xNTQ5OTg0ODU2OTY2NWM0NjFlODIyNjgwYS5qcGcifSwiaWF0IjoxNTUwMTQ2Nzc0LCJleHAiOjE1NTA0MDU5NzR9.fH95CHgmskJibW6haUbQtP07gnf58jecXXT36ftcWMU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9maWxlIjp7ImF2YXRhciI6IiIsIl9pZCI6IjVjNjU3YmNjNjAxMDU2NDAzNTJiNzc1YiIsImVtYWlsIjoic3RhczUyQGdtYWlsLmNvbSIsIm5hbWUiOiJzdGFzNTIyMSIsInBhc3N3b3JkIjoiJDJiJDEwJFVVYlhKN3h1WElWOHRWMkEvQzJqLmVweDI0OTZjeWJTVmlEL0JVVzk2SnIybVhIQ0JQNjBhIn0sImlhdCI6MTU1MDE1OTgxOSwiZXhwIjoxNTUwNDE5MDE5fQ.S1aMfyXbw3lnkziv_0G-OrK8TMKYddy4_F4Dz99xQTA"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "name",
+							"value": "asdfgh",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMessages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9maWxlIjp7Il9pZCI6IjVjNjJlM2ZiN2JlNDI4NmY2MTAwZmY4OCIsInBhc3N3b3JkIjoiJDJiJDEwJFE1TlZhc0dvcHFiQi5PL3R4d2wxMU9GRzBZbXg2RWxzUDNmR2xRSUY2MGZRTmxVRzBsV3FLIiwiZW1haWwiOiJ0ZXN0QG1haWwuY29tIiwibmFtZSI6InRlc3ROYW1lIiwiaW1hZ2VQYXRoIjoicHVibGljL2ltYWdlcy8xNTQ5OTg0ODU2OTY2NWM0NjFlODIyNjgwYS5qcGcifSwiaWF0IjoxNTUwMDQyOTkwLCJleHAiOjE1NTAzMDIxOTB9.VHZr42xoR0PhNIZXvjcBzuE4Q_5sbOzmwpqehjr4N5Q"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
